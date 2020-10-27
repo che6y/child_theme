@@ -17,11 +17,8 @@ add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_scripts', 10 );
 if (! function_exists('abbak_remove_title_on_home_page')){
     function abbak_remove_title_on_home_page($show){
         global $post;
-        $home_page_id = get_option('page_on_front', NULL);
 
-        error_log($home_page_id);
-
-        if ($post->ID == $home_page_id){
+        if ($post->post_type == 'page' || is_home()){
             $show = false;
         }
         return $show;

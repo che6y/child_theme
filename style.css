@@ -5,3 +5,27 @@ Template: hello-elementor
 Version: 1.0.0
 Text Domain: hello-elementor-child
 */
+
+body {
+    padding: 0 20px;
+}
+.home .site-branding {
+    display: none;
+}
+.page-content .home-page-title {
+    margin: 25vh 1vh;
+    text-align: center;
+}
+.page-content .site-title {
+    font-size: 10vw;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.page-content .site-tag {
+    font-size: 2.5vw;
+}
+@media only screen and (max-width: 1200px) {
+    .site-header, body .site-main {
+        max-width: 100% !important;
+    }
+}
